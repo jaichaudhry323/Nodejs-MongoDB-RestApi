@@ -10,11 +10,56 @@ git rm -r --cached node_modules
 4) DO NOT MAKE .GITIGNORE.TXT FILE , YOU NEED TO MAKE .gitignore file without .txt extension ,
    use any of the editors like vs or sublime to do so
 #############################################################################
-
 app.js
 
 // //Middlewares
 // app.use("/post",()=>{
 //     console.log("this is a middleware that will match")
 // });
+
+#############################################################################
+In Router file on doing this without body parser , we get undefined as the output
+console.log(req.body)             // we get undefined , why ? bcoz we need a special package to convert the req to 
+
+
+#############################################################################
+Postman Post Request
+Dont send a request with data in body in text format , theres the option to send data 
+in json format after entering json data in raw(body)
+
+#############################################################################
+JSON Data Format
+{
+    "title": "my first post",
+    "description": "this is my description",      <- This comma at last is wrong
+}
+
+#############################################################################
+If u are using await then u need to write async behind the funciton in which u have declared a command s await
+E.g:
+router.post('/',async (req, res) => {                 -----------------------
+    const post = new Post({
+        title: req.body.title,
+        description: req.body.description
+    });
+
+    try {
+        const savedPost = await post.save();          ------------------------
+        res.json(savedPost)
+    }
+    catch (err) {
+        res.json({ message: err });
+    }
+});
+
+
+
+
+
+
+
+//// NICE SONGS
+Thunder-Final
+rockstar
+
 
