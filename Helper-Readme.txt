@@ -7,7 +7,7 @@ git ls-files --others -i --exclude-standard
 3)Remove the node_modules folder from the git repository
 git rm -r --cached node_modules
 
-4) DO NOT MAKE .GITIGNORE.TXT FILE , YOU NEED TO MAKE .gitignore file without .txt extension ,
+4) DO NOT MAKE .gitignore.txt FILE , YOU NEED TO MAKE .gitignore file without .txt extension ,
    use any of the editors like vs or sublime to do so
 #############################################################################
 app.js
@@ -53,10 +53,14 @@ router.post('/',async (req, res) => {                 -----------------------
 });
 
 
+///////////XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX///////////////////////////////
+IN CASE OF ERRORS :
+1) Make sure all IP's are white listed
+2) Make sure you are using a username and password for that user that you created 
+   and not the username and password of ur Mongo-Atlas Account 
+3) 
 
-
-
-
+///////////XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX///////////////////////////////
 
 //// NICE SONGS
 Thunder-Final
